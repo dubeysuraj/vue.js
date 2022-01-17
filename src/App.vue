@@ -1,13 +1,15 @@
 <template>
 <div>
-  <img src="./assets/logo.png" alt="" width="100">
-  <Home data="Suraj is here!"  msg="We are friends!" />
+  <!-- <img src="./assets/logo.png" alt="" width="100"> -->
+  <Home />
+ 
   </div>
   
 </template>
 
 <script>
 
+// import Home from './components/Home.vue';
 import Home from './components/Home.vue';
 
 export default {
@@ -15,7 +17,7 @@ export default {
   components: {
   
     Home,
-
+   
   }
 }
 </script>
