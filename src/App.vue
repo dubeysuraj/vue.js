@@ -3,6 +3,7 @@
   <!-- <img src="./assets/logo.png" alt="" width="100"> -->
   <Home />
   <DataBind />
+  <Child v-bind:users="users" />
   </div>
   
 </template>
@@ -10,8 +11,9 @@
 <script>
 
 // import Home from './components/Home.vue';
-import Home from './components/Home.vue';
+import Home from './components/Home.vue'
 import DataBind from './components/DataBind.vue'
+import Child from './components/Child.vue'
 
 export default {
   name: 'App',
@@ -19,8 +21,17 @@ export default {
   
     Home,
     DataBind,
-   
-  }
+    Child,
+  },
+    data(){
+     return{users: [
+         {name: "Suraj", email: "suraj@gmail.com"},
+         {name: "charlie", email: "charlie@gmail.com"},
+         {name : "Selena", email: "selena@gmail.com"},
+         {name : "Ariana", email: "ariana@gmail.com"},
+     ]
+     }
+   }
 }
 </script>
 
