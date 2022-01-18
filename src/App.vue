@@ -1,34 +1,21 @@
 <template>
-<div>
-  <!-- <img src="./assets/logo.png" alt="" width="100"> -->
-      <!-- <h1>Send Props Child to Parent</h1> -->
-  <!-- <Home />
-  <DataBind /> -->
-  <h1>{{title}}</h1>
-  <Child v-on:changeTitle="updateTitle($event)" />
+  <div id="app">
+    <h1>Form with checkbox and radio button in Vue js</h1>
+    <SignUp />
   </div>
   
 </template>
 
 <script>
-import Child from './components/Child.vue'
+import SignUp from './components/SignUp'
 
 export default {
   name: 'App',
   components: {
-    Child,
-  },
-    data(){
-     return{title: "Props Tutorial"}
-    
-   },
-    methods:{
-       updateTitle(title)
-       {
-         this.title=title
-       }
-     }
-};
+    SignUp,
+  }
+  
+}
 </script>
 
 <style>
