@@ -1,27 +1,33 @@
 <template>
-    <div class="Home">
-        <h1>Home Component</h1>
-        <Users />
-        <Products />
-    </div>
-    
+   <div>
+        <h1 class="Home">Class and Style Bindings</h1>
+        <h1 v-bind:style="{color: colorKey}">Style Bindings</h1>
+        <h1 v-bind:class="{display:show}">Class binding with objects</h1>
+        <h1 v-bind:class="[show ? 'yesShow': 'noShow']">class bindings with array</h1>
+   </div>
 </template>
 
 <script>
-import Users from './Users.vue'
-import Products from './Products.vue'
 export default {
     name: 'Home',
-    components:{
-        Users,
-        Products,
+    data(){
+        return{
+            show:true,
+            aclass: 'arrayClass',
+            colorKey: 'red'
+        }
     }
 }
 </script>
 
 <style scoped>
-    .Home{
-        background-color: rgb(236, 145, 145) ;
-        height: 500px;
-    }
+     .Home{
+         color: orange
+     }
+     .display{
+         background-color: yellow;
+     }
+     .arrayClass{
+         color: greenyellow;
+     }
 </style>
