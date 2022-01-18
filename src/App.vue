@@ -2,7 +2,7 @@
 <div>
   <!-- <img src="./assets/logo.png" alt="" width="100"> -->
   <Home />
- 
+  <DataBind />
   </div>
   
 </template>
@@ -11,12 +11,14 @@
 
 // import Home from './components/Home.vue';
 import Home from './components/Home.vue';
+import DataBind from './components/DataBind.vue'
 
 export default {
   name: 'App',
   components: {
   
     Home,
+    DataBind,
    
   }
 }
