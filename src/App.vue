@@ -1,38 +1,34 @@
 <template>
 <div>
   <!-- <img src="./assets/logo.png" alt="" width="100"> -->
-  <Home />
-  <DataBind />
-  <Child v-bind:users="users" />
+      <!-- <h1>Send Props Child to Parent</h1> -->
+  <!-- <Home />
+  <DataBind /> -->
+  <h1>{{title}}</h1>
+  <Child v-on:changeTitle="updateTitle($event)" />
   </div>
   
 </template>
 
 <script>
-
-// import Home from './components/Home.vue';
-import Home from './components/Home.vue'
-import DataBind from './components/DataBind.vue'
 import Child from './components/Child.vue'
 
 export default {
   name: 'App',
   components: {
-  
-    Home,
-    DataBind,
     Child,
   },
     data(){
-     return{users: [
-         {name: "Suraj", email: "suraj@gmail.com"},
-         {name: "charlie", email: "charlie@gmail.com"},
-         {name : "Selena", email: "selena@gmail.com"},
-         {name : "Ariana", email: "ariana@gmail.com"},
-     ]
+     return{title: "Props Tutorial"}
+    
+   },
+    methods:{
+       updateTitle(title)
+       {
+         this.title=title
+       }
      }
-   }
-}
+};
 </script>
 
 <style>
